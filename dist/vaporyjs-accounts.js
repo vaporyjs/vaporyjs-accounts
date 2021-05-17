@@ -1,34 +1,34 @@
 (function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.Accounts = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 (function (global,Buffer){
 /**
-ethereumjs-accounts - A suite for managing Ethereum accounts in browser.
+vaporyjs-accounts - A suite for managing vapory accounts in browser.
 
-Welcome to ethereumjs-accounts. Generate, encrypt, manage, export and remove Ethereum accounts and store them in your browsers local storage. You may also choose to extendWeb3 so that transactions made from accounts stored in browser, can be signed with the private key provided. EthereumJs-Accounts also supports account encryption using the AES encryption protocol. You may choose to optionally encrypt your Ethereum account data with a passphrase to prevent others from using or accessing your account.
+Welcome to vaporyjs-accounts. Generate, encrypt, manage, export and remove vapory accounts and store them in your browsers local storage. You may also choose to extendWeb3 so that transactions made from accounts stored in browser, can be signed with the private key provided. vaporyJs-Accounts also supports account encryption using the AES encryption protocol. You may choose to optionally encrypt your vapory account data with a passphrase to prevent others from using or accessing your account.
 
 Requires:
  - cryptojs v0.3.1  <https://github.com/fahad19/crypto-js>
- - localstorejs *  <https://github.com/SilentCicero/localstore>
- - ethereumjs-tx v0.4.0  <https://www.npmjs.com/package/ethereumjs-tx>
- - ethereumjs-tx v1.2.0  <https://www.npmjs.com/package/ethereumjs-util>
+ - localstorejs *  <https://github.com/vaporyjs/localstore>
+ - vaporyjs-tx v0.4.0  <https://www.npmjs.com/package/vaporyjs-tx>
+ - vaporyjs-tx v1.2.0  <https://www.npmjs.com/package/vaporyjs-util>
  - Underscore.js v1.8.3+  <http://underscorejs.org/>
- - Web3.js v0.4.2+ <https://github.com/ethereum/web3.js>
+ - Web3.js v0.4.2+ <https://github.com/vapory/web3.js>
 
 Commands:
     (Browserify)
-    browserify --s Accounts index.js -o dist/ethereumjs-accounts.js
+    browserify --s Accounts index.js -o dist/vaporyjs-accounts.js
 
     (Run)
     node index.js
 
     (NPM)
-    npm install ethereumjs-accounts
+    npm install vaporyjs-accounts
 
     (Meteor)
-    meteor install silentcicero:ethereumjs-accounts
+    meteor install silentcicero:vaporyjs-accounts
 **/
 
 var _ = require('underscore');
-var Tx = require('ethereumjs-tx');
+var Tx = require('vaporyjs-tx');
 var LocalStore = require('localstorejs');
 var BigNumber = require('bignumber.js');
 var JSZip = require("jszip");
@@ -41,7 +41,7 @@ require('browserify-cryptojs/components/cipher-core');
 require('browserify-cryptojs/components/aes');
 
 /**
-The Accounts constructor method. This method will construct the in browser Ethereum accounts manager.
+The Accounts constructor method. This method will construct the in browser vapory accounts manager.
 
 @class Accounts
 @constructor
@@ -55,7 +55,7 @@ var Accounts = module.exports = function(options){
 
     // setup default options
     var defaultOptions = {
-        varName: 'ethereumAccounts'
+        varName: 'vaporyAccounts'
         , minPassphraseLength: 6
         , requirePassphrase: false
         , selectNew: true
@@ -121,12 +121,12 @@ var formatNumber = function(num){
 
 
 /**
-Prepair Ethereum address for either raw transactions or browser storage.
+Prepair vapory address for either raw transactions or browser storage.
 
 @method (formatAddress)
-@param {String} addr    An ethereum address to prep
+@param {String} addr    An vapory address to prep
 @param {String} format          The format type (i.e. 'raw' or 'hex')
-@return {String} The prepaired ethereum address
+@return {String} The prepaired vapory address
 **/
 
 var formatAddress = function(addr, format){
@@ -239,7 +239,7 @@ var defineProperties = function(context){
 Returns true when a valid passphrase is provided.
 
 @method (isPassphrase)
-@param {String} passphrase    A valid ethereum passphrase
+@param {String} passphrase    A valid vapory passphrase
 @return {Boolean} Whether the passphrase is valid or invalid.
 **/
 
@@ -261,7 +261,7 @@ This will set in browser accounts data at a specified address with the specified
 **/
 
 Accounts.prototype.set = function(address, accountObject){
-    var accounts = LocalStore.get('ethereumAccounts');
+    var accounts = LocalStore.get('vaporyAccounts');
 
     // if object, store; if null, delete
     if(_.isObject(accountObject))
@@ -276,7 +276,7 @@ Accounts.prototype.set = function(address, accountObject){
 
 
 /**
-Remove an account from the Ethereum accounts stored in browser
+Remove an account from the vapory accounts stored in browser
 
 @method (remove)
 @param {String} address          The address of the account stored in browser
@@ -288,7 +288,7 @@ Accounts.prototype.remove = function(address){
 
 
 /**
-Generate a new Ethereum account in browser with a passphrase that will encrypt the public and private keys with AES for storage.
+Generate a new vapory account in browser with a passphrase that will encrypt the public and private keys with AES for storage.
 
 @method (new)
 @param {String} passphrase          The passphrase to encrypt the public and private keys.
@@ -297,14 +297,14 @@ Generate a new Ethereum account in browser with a passphrase that will encrypt t
 
 Accounts.prototype.new = function(passphrase){
     var private = new Buffer(randomBytes(64), 'hex');
-    var public = ethUtil.privateToPublic(private);
-    var address = formatAddress(ethUtil.publicToAddress(public)
+    var public = vapUtil.privateToPublic(private);
+    var address = formatAddress(vapUtil.publicToAddress(public)
                                 .toString('hex'));
     var accountObject = {
         address: address
         , encrypted: false
         , locked: false
-        , hash: ethUtil.sha3(public.toString('hex') + private.toString('hex')).toString('hex')
+        , hash: vapUtil.sha3(public.toString('hex') + private.toString('hex')).toString('hex')
     };
 
     // if passphrrase provided or required, attempt account encryption
@@ -400,7 +400,7 @@ Accounts.prototype.get = function(address, passphrase){
                 .decrypt(accountObject.public, passphrase)
                 .toString(CryptoJS.enc.Utf8);
 
-            if(ethUtil.sha3(accountObject.public + accountObject.private).toString('hex') == accountObject.hash)
+            if(vapUtil.sha3(accountObject.public + accountObject.private).toString('hex') == accountObject.hash)
                 accountObject.locked = false;
         }catch(e){
             this.log('Error while decrypting public/private keys: ' + String(e));
@@ -412,7 +412,7 @@ Accounts.prototype.get = function(address, passphrase){
 
 
 /**
-Clear all stored Ethereum accounts in browser.
+Clear all stored vapory accounts in browser.
 
 @method (clear)
 **/
@@ -512,7 +512,7 @@ Accounts.prototype.backup = function(){
 
 
 /**
-A log function that will log all actions that occur with ethereumjs-accounts.
+A log function that will log all actions that occur with vaporyjs-accounts.
 
 @method (log)
 **/
@@ -528,7 +528,7 @@ Return all accounts as a list array.
 **/
 
 Accounts.prototype.list = function(){
-    var accounts = LocalStore.get('ethereumAccounts'),
+    var accounts = LocalStore.get('vaporyAccounts'),
         return_array = [];
 
     _.each(_.keys(accounts), function(accountKey, accountIndex){
@@ -591,27 +591,27 @@ Accounts.prototype.signTransaction = function(tx_params, callback) {
     }
 
     var rawTx = {
-        nonce: formatHex(ethUtil.stripHexPrefix(tx_params.nonce)),
-        gasPrice: formatHex(ethUtil.stripHexPrefix(tx_params.gasPrice)),
+        nonce: formatHex(vapUtil.stripHexPrefix(tx_params.nonce)),
+        gasPrice: formatHex(vapUtil.stripHexPrefix(tx_params.gasPrice)),
         gasLimit: formatHex(new BigNumber('3141592').toString(16)),
         value: '00',
         data: ''
     };
 
     if(tx_params.gasPrice != null)
-        rawTx.gasPrice = formatHex(ethUtil.stripHexPrefix(tx_params.gasPrice));
+        rawTx.gasPrice = formatHex(vapUtil.stripHexPrefix(tx_params.gasPrice));
 
     if(tx_params.gas != null)
-        rawTx.gasLimit = formatHex(ethUtil.stripHexPrefix(tx_params.gas));
+        rawTx.gasLimit = formatHex(vapUtil.stripHexPrefix(tx_params.gas));
 
     if(tx_params.to != null)
-        rawTx.to = formatHex(ethUtil.stripHexPrefix(tx_params.to));
+        rawTx.to = formatHex(vapUtil.stripHexPrefix(tx_params.to));
 
     if(tx_params.value != null)
-        rawTx.value = formatHex(ethUtil.stripHexPrefix(tx_params.value));
+        rawTx.value = formatHex(vapUtil.stripHexPrefix(tx_params.value));
 
     if(tx_params.data != null)
-        rawTx.data = formatHex(ethUtil.stripHexPrefix(tx_params.data));
+        rawTx.data = formatHex(vapUtil.stripHexPrefix(tx_params.data));
 
     // convert string private key to a Buffer Object
     var privateKey = new Buffer(account.private, 'hex');
@@ -627,7 +627,7 @@ Accounts.prototype.signTransaction = function(tx_params, callback) {
 };
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer)
-},{"bignumber.js":2,"browserify-cryptojs":8,"browserify-cryptojs/components/aes":3,"browserify-cryptojs/components/cipher-core":4,"browserify-cryptojs/components/enc-base64":5,"browserify-cryptojs/components/evpkdf":6,"browserify-cryptojs/components/md5":7,"buffer":111,"ethereumjs-tx":10,"jszip":75,"localstorejs":106,"node-safe-filesaver":107,"underscore":108}],2:[function(require,module,exports){
+},{"bignumber.js":2,"browserify-cryptojs":8,"browserify-cryptojs/components/aes":3,"browserify-cryptojs/components/cipher-core":4,"browserify-cryptojs/components/enc-base64":5,"browserify-cryptojs/components/evpkdf":6,"browserify-cryptojs/components/md5":7,"buffer":111,"vaporyjs-tx":10,"jszip":75,"localstorejs":106,"node-safe-filesaver":107,"underscore":108}],2:[function(require,module,exports){
 /*! bignumber.js v2.0.7 https://github.com/MikeMcl/bignumber.js/LICENCE */
 
 ;(function (global) {
@@ -5596,7 +5596,7 @@ var CryptoJS = CryptoJS || (function (Math, undefined) {
 module.exports = CryptoJS;
 },{}],9:[function(require,module,exports){
 (function (Buffer){
-const utils = require('ethereumjs-util');
+const utils = require('vaporyjs-util');
 const BN = require('bn.js');
 const ec = require('elliptic').ec('secp256k1');
 
@@ -5659,17 +5659,17 @@ exports.txGetSenderPublicKey = function() {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"bn.js":11,"buffer":111,"elliptic":12,"ethereumjs-util":37}],10:[function(require,module,exports){
+},{"bn.js":11,"buffer":111,"elliptic":12,"vaporyjs-util":37}],10:[function(require,module,exports){
 (function (global,Buffer){
 const BN = require('bn.js')
 const rlp = require('rlp')
-const ethUtil = require('ethereumjs-util')
-const fees = require('ethereum-common').fees
+const vapUtil = require('vaporyjs-util')
+const fees = require('vapory-common').fees
 const ecdsaOps = require('./ecdsaOps.js')
 
 //give browser access to Buffers
 global.Buffer = Buffer
-global.ethUtil = ethUtil
+global.vapUtil = vapUtil
 
 /**
  * Represents a transaction
@@ -5715,12 +5715,12 @@ var Transaction = module.exports = function(data) {
     name: 'r',
     pad: true,
     length: 32,
-    default: ethUtil.zeros(32)
+    default: vapUtil.zeros(32)
   }, {
     name: 's',
     pad: true,
     length: 32,
-    default: ethUtil.zeros(32)
+    default: vapUtil.zeros(32)
   }]
 
   Object.defineProperty(this, 'from', {
@@ -5736,7 +5736,7 @@ var Transaction = module.exports = function(data) {
     }
   })
 
-  ethUtil.defineProperties(this, fields, data)
+  vapUtil.defineProperties(this, fields, data)
 }
 
 /**
@@ -5766,7 +5766,7 @@ Transaction.prototype.hash = function(signature) {
     toHash = this.raw.slice(0, 6)
 
   //create hash
-  return ethUtil.sha3(rlp.encode(toHash))
+  return vapUtil.sha3(rlp.encode(toHash))
 }
 
 /**
@@ -5776,7 +5776,7 @@ Transaction.prototype.hash = function(signature) {
  */
 Transaction.prototype.getSenderAddress = function() {
   const pubKey = this.getSenderPublicKey()
-  return ethUtil.pubToAddress(pubKey)
+  return vapUtil.pubToAddress(pubKey)
 }
 
 /**
@@ -5842,11 +5842,11 @@ Transaction.prototype.getUpfrontCost = function() {
  * @return {Boolean}
  */
 Transaction.prototype.validate = function() {
-  return this.verifySignature() && (Number(this.getBaseFee().toString()) <= ethUtil.bufferToInt(this.gasLimit))
+  return this.verifySignature() && (Number(this.getBaseFee().toString()) <= vapUtil.bufferToInt(this.gasLimit))
 }
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {},require("buffer").Buffer)
-},{"./ecdsaOps.js":9,"bn.js":11,"buffer":111,"ethereum-common":35,"ethereumjs-util":37,"rlp":66}],11:[function(require,module,exports){
+},{"./ecdsaOps.js":9,"bn.js":11,"buffer":111,"vapory-common":35,"vaporyjs-util":37,"rlp":66}],11:[function(require,module,exports){
 (function (module, exports) {
 
 'use strict';
@@ -13238,7 +13238,7 @@ exports.sha3 = function(a, bytes) {
 }
 
 /**
- * Returns the ethereum address of a given public key
+ * Returns the vapory address of a given public key
  * @method pubToAddress
  * @param {Buffer}
  * @return {Buffer}
@@ -13250,7 +13250,7 @@ exports.pubToAddress = exports.publicToAddress = function(pubKey) {
 }
 
 /**
- * Returns the ethereum public key of a given private key
+ * Returns the vapory public key of a given private key
  * @method privateToPublic
  * @param {Buffer} privateKey
  * @return {Buffer}
@@ -13262,7 +13262,7 @@ var privateToPublic = exports.privateToPublic = function(privateKey){
 }
 
 /**
- * Returns the ethereum address of a given private key
+ * Returns the vapory address of a given private key
  * @method privateToAddress
  * @param {Buffer} privateKey
  * @return {Buffer}
@@ -19050,7 +19050,7 @@ module.exports={
 const assert = require('assert')
 
 /**
- * RLP Encoding based on: https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-RLP
+ * RLP Encoding based on: https://github.com/vapory/wiki/wiki/%5BEnglish%5D-RLP
  * This function takes in a data, convert it to buffer if not, and a length for recursion
  *
  * @param {Buffer,String,Integer,Array} data - will be converted to buffer
@@ -19092,7 +19092,7 @@ function encodeLength(len, offset) {
 }
 
 /**
- * RLP Decoding based on: {@link https://github.com/ethereum/wiki/wiki/%5BEnglish%5D-RLP|RLP}
+ * RLP Decoding based on: {@link https://github.com/vapory/wiki/wiki/%5BEnglish%5D-RLP|RLP}
  *
  * @param {Buffer,String,Integer,Array} data - will be converted to buffer
  * @returns {Array} - returns decode Array of Buffers containg the original message

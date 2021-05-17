@@ -1,19 +1,19 @@
 require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 /*
-    This file is part of ethereum.js.
+    This file is part of vapory.js.
 
-    ethereum.js is free software: you can redistribute it and/or modify
+    vapory.js is free software: you can redistribute it and/or modify
     it under the terms of the GNU Lesser General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    ethereum.js is distributed in the hope that it will be useful,
+    vapory.js is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU Lesser General Public License for more details.
 
     You should have received a copy of the GNU Lesser General Public License
-    along with ethereum.js.  If not, see <http://www.gnu.org/licenses/>.
+    along with vapory.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 /** 
  * @file coder.js
@@ -291,20 +291,20 @@ module.exports = coder;
 
 },{"../utils/utils":7,"./formatters":2,"./param":3,"bignumber.js":"bignumber.js"}],2:[function(require,module,exports){
 /*
-    This file is part of ethereum.js.
+    This file is part of vapory.js.
 
-    ethereum.js is free software: you can redistribute it and/or modify
+    vapory.js is free software: you can redistribute it and/or modify
     it under the terms of the GNU Lesser General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    ethereum.js is distributed in the hope that it will be useful,
+    vapory.js is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU Lesser General Public License for more details.
 
     You should have received a copy of the GNU Lesser General Public License
-    along with ethereum.js.  If not, see <http://www.gnu.org/licenses/>.
+    along with vapory.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 /** 
  * @file formatters.js
@@ -542,20 +542,20 @@ module.exports = {
 
 },{"../utils/config":5,"../utils/utils":7,"./param":3,"bignumber.js":"bignumber.js"}],3:[function(require,module,exports){
 /*
-    This file is part of ethereum.js.
+    This file is part of vapory.js.
 
-    ethereum.js is free software: you can redistribute it and/or modify
+    vapory.js is free software: you can redistribute it and/or modify
     it under the terms of the GNU Lesser General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    ethereum.js is distributed in the hope that it will be useful,
+    vapory.js is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU Lesser General Public License for more details.
 
     You should have received a copy of the GNU Lesser General Public License
-    along with ethereum.js.  If not, see <http://www.gnu.org/licenses/>.
+    along with vapory.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 /** 
  * @file param.js
@@ -766,20 +766,20 @@ if (typeof XMLHttpRequest === 'undefined') {
 
 },{}],5:[function(require,module,exports){
 /*
-    This file is part of ethereum.js.
+    This file is part of vapory.js.
 
-    ethereum.js is free software: you can redistribute it and/or modify
+    vapory.js is free software: you can redistribute it and/or modify
     it under the terms of the GNU Lesser General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    ethereum.js is distributed in the hope that it will be useful,
+    vapory.js is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU Lesser General Public License for more details.
 
     You should have received a copy of the GNU Lesser General Public License
-    along with ethereum.js.  If not, see <http://www.gnu.org/licenses/>.
+    along with vapory.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 /** @file config.js
  * @authors:
@@ -810,27 +810,27 @@ var ETH_UNITS = [
     'Gwei',
     'szabo',
     'finney',
-    'femtoether',
-    'picoether',
-    'nanoether',
-    'microether',
-    'milliether',
+    'femtovapor',
+    'picovapor',
+    'nanovapor',
+    'microvapor',
+    'millivapor',
     'nano',
     'micro',
     'milli',
-    'ether',
+    'vapor',
     'grand',
-    'Mether',
-    'Gether',
-    'Tether',
-    'Pether',
-    'Eether',
-    'Zether',
-    'Yether',
-    'Nether',
-    'Dether',
-    'Vether',
-    'Uether'
+    'Mvapor',
+    'Gvapor',
+    'Tvapor',
+    'Pvapor',
+    'Evapor',
+    'Zvapor',
+    'Yvapor',
+    'Nvapor',
+    'Dvapor',
+    'Vvapor',
+    'Uvapor'
 ];
 
 module.exports = {
@@ -846,20 +846,20 @@ module.exports = {
 
 },{"bignumber.js":"bignumber.js"}],6:[function(require,module,exports){
 /*
-    This file is part of ethereum.js.
+    This file is part of vapory.js.
 
-    ethereum.js is free software: you can redistribute it and/or modify
+    vapory.js is free software: you can redistribute it and/or modify
     it under the terms of the GNU Lesser General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    ethereum.js is distributed in the hope that it will be useful,
+    vapory.js is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU Lesser General Public License for more details.
 
     You should have received a copy of the GNU Lesser General Public License
-    along with ethereum.js.  If not, see <http://www.gnu.org/licenses/>.
+    along with vapory.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 /** 
  * @file sha3.js
@@ -874,7 +874,7 @@ module.exports = function (str, isNew) {
     if (str.substr(0, 2) === '0x' && !isNew) {
         console.warn('requirement of using web3.fromAscii before sha3 is deprecated');
         console.warn('new usage: \'web3.sha3("hello")\'');
-        console.warn('see https://github.com/ethereum/web3.js/pull/205');
+        console.warn('see https://github.com/vapory/web3.js/pull/205');
         console.warn('if you need to hash hex value, you can do \'sha3("0xfff", true)\'');
         str = utils.toAscii(str);
     }
@@ -887,20 +887,20 @@ module.exports = function (str, isNew) {
 
 },{"./utils":7,"crypto-js/sha3":34}],7:[function(require,module,exports){
 /*
-    This file is part of ethereum.js.
+    This file is part of vapory.js.
 
-    ethereum.js is free software: you can redistribute it and/or modify
+    vapory.js is free software: you can redistribute it and/or modify
     it under the terms of the GNU Lesser General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    ethereum.js is distributed in the hope that it will be useful,
+    vapory.js is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU Lesser General Public License for more details.
 
     You should have received a copy of the GNU Lesser General Public License
-    along with ethereum.js.  If not, see <http://www.gnu.org/licenses/>.
+    along with vapory.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 /** 
  * @file utils.js
@@ -927,27 +927,27 @@ var unitMap = {
     'wei':          '1',
     'kwei':         '1000',
     'ada':          '1000',
-    'femtoether':   '1000',
+    'femtovapor':   '1000',
     'mwei':         '1000000',
     'babbage':      '1000000',
-    'picoether':    '1000000',
+    'picovapor':    '1000000',
     'gwei':         '1000000000',
     'shannon':      '1000000000',
-    'nanoether':    '1000000000',
+    'nanovapor':    '1000000000',
     'nano':         '1000000000',
     'szabo':        '1000000000000',
-    'microether':   '1000000000000',
+    'microvapor':   '1000000000000',
     'micro':        '1000000000000',
     'finney':       '1000000000000000',
-    'milliether':    '1000000000000000',
+    'millivapor':    '1000000000000000',
     'milli':         '1000000000000000',
-    'ether':        '1000000000000000000',
-    'kether':       '1000000000000000000000',
+    'vapor':        '1000000000000000000',
+    'kvapor':       '1000000000000000000000',
     'grand':        '1000000000000000000000',
     'einstein':     '1000000000000000000000',
-    'mether':       '1000000000000000000000000',
-    'gether':       '1000000000000000000000000000',
-    'tether':       '1000000000000000000000000000000'
+    'mvapor':       '1000000000000000000000000',
+    'gvapor':       '1000000000000000000000000000',
+    'tvapor':       '1000000000000000000000000000000'
 };
 
 /**
@@ -1131,12 +1131,12 @@ var toHex = function (val) {
  * Returns value of unit in Wei
  *
  * @method getValueOfUnit
- * @param {String} unit the unit to convert to, default ether
+ * @param {String} unit the unit to convert to, default vapor
  * @returns {BigNumber} value of the unit (in Wei)
  * @throws error if the unit is not correct:w
  */
 var getValueOfUnit = function (unit) {
-    unit = unit ? unit.toLowerCase() : 'ether';
+    unit = unit ? unit.toLowerCase() : 'vapor';
     var unitValue = unitMap[unit];
     if (unitValue === undefined) {
         throw new Error('This unit doesn\'t exists, please use the one of the following units' + JSON.stringify(unitMap, null, 2));
@@ -1145,24 +1145,24 @@ var getValueOfUnit = function (unit) {
 };
 
 /**
- * Takes a number of wei and converts it to any other ether unit.
+ * Takes a number of wei and converts it to any other vapor unit.
  *
  * Possible units are:
  *   SI Short   SI Full        Effigy       Other
- * - kwei       femtoether     ada
- * - mwei       picoether      babbage
- * - gwei       nanoether      shannon      nano
- * - --         microether     szabo        micro
- * - --         milliether     finney       milli
- * - ether      --             --
- * - kether                    einstein     grand 
- * - mether
- * - gether
- * - tether
+ * - kwei       femtovapor     ada
+ * - mwei       picovapor      babbage
+ * - gwei       nanovapor      shannon      nano
+ * - --         microvapor     szabo        micro
+ * - --         millivapor     finney       milli
+ * - vapor      --             --
+ * - kvapor                    einstein     grand 
+ * - mvapor
+ * - gvapor
+ * - tvapor
  *
  * @method fromWei
  * @param {Number|String} number can be a number, number string or a HEX of a decimal
- * @param {String} unit the unit to convert to, default ether
+ * @param {String} unit the unit to convert to, default vapor
  * @return {String|Object} When given a BigNumber object it returns one as well, otherwise a number
 */
 var fromWei = function(number, unit) {
@@ -1176,20 +1176,20 @@ var fromWei = function(number, unit) {
  *
  * Possible units are:
  *   SI Short   SI Full        Effigy       Other
- * - kwei       femtoether     ada
- * - mwei       picoether      babbage       
- * - gwei       nanoether      shannon      nano
- * - --         microether     szabo        micro
- * - --         milliether     finney       milli
- * - ether      --             --
- * - kether                    einstein     grand 
- * - mether
- * - gether
- * - tether
+ * - kwei       femtovapor     ada
+ * - mwei       picovapor      babbage       
+ * - gwei       nanovapor      shannon      nano
+ * - --         microvapor     szabo        micro
+ * - --         millivapor     finney       milli
+ * - vapor      --             --
+ * - kvapor                    einstein     grand 
+ * - mvapor
+ * - gvapor
+ * - tvapor
  *
  * @method toWei
  * @param {Number|String|BigNumber} number can be a number, number string or a HEX of a decimal
- * @param {String} unit the unit to convert from, default ether
+ * @param {String} unit the unit to convert from, default vapor
  * @return {String|Object} When given a BigNumber object it returns one as well, otherwise a number
 */
 var toWei = function(number, unit) {
@@ -1359,7 +1359,7 @@ var isJson = function (str) {
 };
 
 /**
- * This method should be called to check if string is valid ethereum IBAN number
+ * This method should be called to check if string is valid vapory IBAN number
  * Supports direct and indirect IBANs
  *
  * @method isIBAN
@@ -1406,20 +1406,20 @@ module.exports={
 
 },{}],9:[function(require,module,exports){
 /*
-    This file is part of ethereum.js.
+    This file is part of vapory.js.
 
-    ethereum.js is free software: you can redistribute it and/or modify
+    vapory.js is free software: you can redistribute it and/or modify
     it under the terms of the GNU Lesser General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    ethereum.js is distributed in the hope that it will be useful,
+    vapory.js is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU Lesser General Public License for more details.
 
     You should have received a copy of the GNU Lesser General Public License
-    along with ethereum.js.  If not, see <http://www.gnu.org/licenses/>.
+    along with vapory.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 /** @file web3.js
  * @authors:
@@ -1433,7 +1433,7 @@ module.exports={
 
 var version = require('./version.json');
 var net = require('./web3/net');
-var eth = require('./web3/eth');
+var vap = require('./web3/vap');
 var db = require('./web3/db');
 var shh = require('./web3/shh');
 var watches = require('./web3/watches');
@@ -1457,8 +1457,8 @@ var web3Properties = [
         inputFormatter: utils.toDecimal
     }),
     new Property({
-        name: 'version.ethereum',
-        getter: 'eth_protocolVersion',
+        name: 'version.vapory',
+        getter: 'vap_protocolVersion',
         inputFormatter: utils.toDecimal
     }),
     new Property({
@@ -1490,11 +1490,11 @@ web3.providers = {};
 web3.currentProvider = null;
 web3.version = {};
 web3.version.api = version.version;
-web3.eth = {};
+web3.vap = {};
 
 /*jshint maxparams:4 */
-web3.eth.filter = function (fil, callback) {
-    return new Filter(fil, watches.eth(), formatters.outputLogFormatter, callback);
+web3.vap.filter = function (fil, callback) {
+    return new Filter(fil, watches.vap(), formatters.outputLogFormatter, callback);
 };
 /*jshint maxparams:3 */
 
@@ -1532,7 +1532,7 @@ web3.createBatch = function () {
 };
 
 // ADD defaultblock
-Object.defineProperty(web3.eth, 'defaultBlock', {
+Object.defineProperty(web3.vap, 'defaultBlock', {
     get: function () {
         return c.defaultBlock;
     },
@@ -1542,7 +1542,7 @@ Object.defineProperty(web3.eth, 'defaultBlock', {
     }
 });
 
-Object.defineProperty(web3.eth, 'defaultAccount', {
+Object.defineProperty(web3.vap, 'defaultAccount', {
     get: function () {
         return c.defaultAccount;
     },
@@ -1573,30 +1573,30 @@ web3._extend.Property = require('./web3/property');
 setupProperties(web3, web3Properties);
 setupMethods(web3.net, net.methods);
 setupProperties(web3.net, net.properties);
-setupMethods(web3.eth, eth.methods);
-setupProperties(web3.eth, eth.properties);
+setupMethods(web3.vap, vap.methods);
+setupProperties(web3.vap, vap.properties);
 setupMethods(web3.db, db.methods);
 setupMethods(web3.shh, shh.methods);
 
 module.exports = web3;
 
 
-},{"./utils/config":5,"./utils/sha3":6,"./utils/utils":7,"./version.json":8,"./web3/batch":11,"./web3/db":13,"./web3/eth":15,"./web3/filter":17,"./web3/formatters":18,"./web3/method":24,"./web3/net":26,"./web3/property":27,"./web3/requestmanager":28,"./web3/shh":29,"./web3/watches":31}],10:[function(require,module,exports){
+},{"./utils/config":5,"./utils/sha3":6,"./utils/utils":7,"./version.json":8,"./web3/batch":11,"./web3/db":13,"./web3/vap":15,"./web3/filter":17,"./web3/formatters":18,"./web3/method":24,"./web3/net":26,"./web3/property":27,"./web3/requestmanager":28,"./web3/shh":29,"./web3/watches":31}],10:[function(require,module,exports){
 /*
-    This file is part of ethereum.js.
+    This file is part of vapory.js.
 
-    ethereum.js is free software: you can redistribute it and/or modify
+    vapory.js is free software: you can redistribute it and/or modify
     it under the terms of the GNU Lesser General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    ethereum.js is distributed in the hope that it will be useful,
+    vapory.js is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU Lesser General Public License for more details.
 
     You should have received a copy of the GNU Lesser General Public License
-    along with ethereum.js.  If not, see <http://www.gnu.org/licenses/>.
+    along with vapory.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 /** 
  * @file allevents.js
@@ -1652,7 +1652,7 @@ AllSolidityEvents.prototype.decode = function (data) {
 AllSolidityEvents.prototype.execute = function (options, callback) {
     var o = this.encode(options);
     var formatter = this.decode.bind(this);
-    return new Filter(o, watches.eth(), formatter, callback);
+    return new Filter(o, watches.vap(), formatter, callback);
 };
 
 AllSolidityEvents.prototype.attachToContract = function (contract) {
@@ -1665,20 +1665,20 @@ module.exports = AllSolidityEvents;
 
 },{"../utils/sha3":6,"../utils/utils":7,"./event":16,"./filter":17,"./formatters":18,"./watches":31}],11:[function(require,module,exports){
 /*
-    This file is part of ethereum.js.
+    This file is part of vapory.js.
 
-    ethereum.js is free software: you can redistribute it and/or modify
+    vapory.js is free software: you can redistribute it and/or modify
     it under the terms of the GNU Lesser General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    ethereum.js is distributed in the hope that it will be useful,
+    vapory.js is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU Lesser General Public License for more details.
 
     You should have received a copy of the GNU Lesser General Public License
-    along with ethereum.js.  If not, see <http://www.gnu.org/licenses/>.
+    along with vapory.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 /** 
  * @file batch.js
@@ -1733,20 +1733,20 @@ module.exports = Batch;
 
 },{"./errors":14,"./jsonrpc":23,"./requestmanager":28}],12:[function(require,module,exports){
 /*
-    This file is part of ethereum.js.
+    This file is part of vapory.js.
 
-    ethereum.js is free software: you can redistribute it and/or modify
+    vapory.js is free software: you can redistribute it and/or modify
     it under the terms of the GNU Lesser General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    ethereum.js is distributed in the hope that it will be useful,
+    vapory.js is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU Lesser General Public License for more details.
 
     You should have received a copy of the GNU Lesser General Public License
-    along with ethereum.js.  If not, see <http://www.gnu.org/licenses/>.
+    along with vapory.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 /** 
  * @file contract.js
@@ -1843,7 +1843,7 @@ var checkForContractAddress = function(contract, abi, callback){
         callbackFired = false;
 
     // wait for receipt
-    var filter = web3.eth.filter('latest', function(e){
+    var filter = web3.vap.filter('latest', function(e){
         if(!e && !callbackFired) {
             count++;
 
@@ -1863,10 +1863,10 @@ var checkForContractAddress = function(contract, abi, callback){
 
             } else {
 
-                web3.eth.getTransactionReceipt(contract.transactionHash, function(e, receipt){
+                web3.vap.getTransactionReceipt(contract.transactionHash, function(e, receipt){
                     if(receipt && !callbackFired) {
 
-                        web3.eth.getCode(receipt.contractAddress, function(e, code){
+                        web3.vap.getCode(receipt.contractAddress, function(e, code){
                             /*jshint maxcomplexity: 5 */
 
                             if(callbackFired)
@@ -1950,7 +1950,7 @@ ContractFactory.prototype.new = function () {
     if(callback) {
 
         // wait for the contract address adn check if the code was deployed
-        web3.eth.sendTransaction(options, function (err, hash) {
+        web3.vap.sendTransaction(options, function (err, hash) {
             if (err) {
                 callback(err);
             } else {
@@ -1964,7 +1964,7 @@ ContractFactory.prototype.new = function () {
             }
         });
     } else {
-        var hash = web3.eth.sendTransaction(options);
+        var hash = web3.vap.sendTransaction(options);
         // add the transaction hash
         contract.transactionHash = hash;
         checkForContractAddress(contract, _this.abi);
@@ -2012,20 +2012,20 @@ module.exports = contract;
 
 },{"../solidity/coder":1,"../utils/utils":7,"../web3":9,"./allevents":10,"./event":16,"./function":19}],13:[function(require,module,exports){
 /*
-    This file is part of ethereum.js.
+    This file is part of vapory.js.
 
-    ethereum.js is free software: you can redistribute it and/or modify
+    vapory.js is free software: you can redistribute it and/or modify
     it under the terms of the GNU Lesser General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    ethereum.js is distributed in the hope that it will be useful,
+    vapory.js is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU Lesser General Public License for more details.
 
     You should have received a copy of the GNU Lesser General Public License
-    along with ethereum.js.  If not, see <http://www.gnu.org/licenses/>.
+    along with vapory.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 /** @file db.js
  * @authors:
@@ -2070,20 +2070,20 @@ module.exports = {
 
 },{"./method":24}],14:[function(require,module,exports){
 /*
-    This file is part of ethereum.js.
+    This file is part of vapory.js.
 
-    ethereum.js is free software: you can redistribute it and/or modify
+    vapory.js is free software: you can redistribute it and/or modify
     it under the terms of the GNU Lesser General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    ethereum.js is distributed in the hope that it will be useful,
+    vapory.js is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU Lesser General Public License for more details.
 
     You should have received a copy of the GNU Lesser General Public License
-    along with ethereum.js.  If not, see <http://www.gnu.org/licenses/>.
+    along with vapory.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 /** 
  * @file errors.js
@@ -2110,23 +2110,23 @@ module.exports = {
 
 },{}],15:[function(require,module,exports){
 /*
-    This file is part of ethereum.js.
+    This file is part of vapory.js.
 
-    ethereum.js is free software: you can redistribute it and/or modify
+    vapory.js is free software: you can redistribute it and/or modify
     it under the terms of the GNU Lesser General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    ethereum.js is distributed in the hope that it will be useful,
+    vapory.js is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU Lesser General Public License for more details.
 
     You should have received a copy of the GNU Lesser General Public License
-    along with ethereum.js.  If not, see <http://www.gnu.org/licenses/>.
+    along with vapory.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 /**
- * @file eth.js
+ * @file vap.js
  * @author Marek Kotewicz <marek@ethdev.com>
  * @author Fabian Vogelsteller <fabian@ethdev.com>
  * @date 2015
@@ -2139,7 +2139,7 @@ module.exports = {
  */
 
 /**
- * Eth methods and properties
+ * Vap methods and properties
  *
  * An example method object can look as follows:
  *
@@ -2154,7 +2154,7 @@ module.exports = {
  *         ]
  *       },
  *
- * @class [web3] eth
+ * @class [web3] vap
  * @constructor
  */
 
@@ -2166,30 +2166,30 @@ var Method = require('./method');
 var Property = require('./property');
 
 var blockCall = function (args) {
-    return (utils.isString(args[0]) && args[0].indexOf('0x') === 0) ? "eth_getBlockByHash" : "eth_getBlockByNumber";
+    return (utils.isString(args[0]) && args[0].indexOf('0x') === 0) ? "vap_getBlockByHash" : "vap_getBlockByNumber";
 };
 
 var transactionFromBlockCall = function (args) {
-    return (utils.isString(args[0]) && args[0].indexOf('0x') === 0) ? 'eth_getTransactionByBlockHashAndIndex' : 'eth_getTransactionByBlockNumberAndIndex';
+    return (utils.isString(args[0]) && args[0].indexOf('0x') === 0) ? 'vap_getTransactionByBlockHashAndIndex' : 'vap_getTransactionByBlockNumberAndIndex';
 };
 
 var uncleCall = function (args) {
-    return (utils.isString(args[0]) && args[0].indexOf('0x') === 0) ? 'eth_getUncleByBlockHashAndIndex' : 'eth_getUncleByBlockNumberAndIndex';
+    return (utils.isString(args[0]) && args[0].indexOf('0x') === 0) ? 'vap_getUncleByBlockHashAndIndex' : 'vap_getUncleByBlockNumberAndIndex';
 };
 
 var getBlockTransactionCountCall = function (args) {
-    return (utils.isString(args[0]) && args[0].indexOf('0x') === 0) ? 'eth_getBlockTransactionCountByHash' : 'eth_getBlockTransactionCountByNumber';
+    return (utils.isString(args[0]) && args[0].indexOf('0x') === 0) ? 'vap_getBlockTransactionCountByHash' : 'vap_getBlockTransactionCountByNumber';
 };
 
 var uncleCountCall = function (args) {
-    return (utils.isString(args[0]) && args[0].indexOf('0x') === 0) ? 'eth_getUncleCountByBlockHash' : 'eth_getUncleCountByBlockNumber';
+    return (utils.isString(args[0]) && args[0].indexOf('0x') === 0) ? 'vap_getUncleCountByBlockHash' : 'vap_getUncleCountByBlockNumber';
 };
 
-/// @returns an array of objects describing web3.eth api methods
+/// @returns an array of objects describing web3.vap api methods
 
 var getBalance = new Method({
     name: 'getBalance',
-    call: 'eth_getBalance',
+    call: 'vap_getBalance',
     params: 2,
     inputFormatter: [utils.toAddress, formatters.inputDefaultBlockNumberFormatter],
     outputFormatter: formatters.outputBigNumberFormatter
@@ -2197,14 +2197,14 @@ var getBalance = new Method({
 
 var getStorageAt = new Method({
     name: 'getStorageAt',
-    call: 'eth_getStorageAt',
+    call: 'vap_getStorageAt',
     params: 3,
     inputFormatter: [null, utils.toHex, formatters.inputDefaultBlockNumberFormatter]
 });
 
 var getCode = new Method({
     name: 'getCode',
-    call: 'eth_getCode',
+    call: 'vap_getCode',
     params: 2,
     inputFormatter: [utils.toAddress, formatters.inputDefaultBlockNumberFormatter]
 });
@@ -2228,7 +2228,7 @@ var getUncle = new Method({
 
 var getCompilers = new Method({
     name: 'getCompilers',
-    call: 'eth_getCompilers',
+    call: 'vap_getCompilers',
     params: 0
 });
 
@@ -2250,7 +2250,7 @@ var getBlockUncleCount = new Method({
 
 var getTransaction = new Method({
     name: 'getTransaction',
-    call: 'eth_getTransactionByHash',
+    call: 'vap_getTransactionByHash',
     params: 1,
     outputFormatter: formatters.outputTransactionFormatter
 });
@@ -2265,14 +2265,14 @@ var getTransactionFromBlock = new Method({
 
 var getTransactionReceipt = new Method({
     name: 'getTransactionReceipt',
-    call: 'eth_getTransactionReceipt',
+    call: 'vap_getTransactionReceipt',
     params: 1,
     outputFormatter: formatters.outputTransactionReceiptFormatter
 });
 
 var getTransactionCount = new Method({
     name: 'getTransactionCount',
-    call: 'eth_getTransactionCount',
+    call: 'vap_getTransactionCount',
     params: 2,
     inputFormatter: [null, formatters.inputDefaultBlockNumberFormatter],
     outputFormatter: utils.toDecimal
@@ -2280,28 +2280,28 @@ var getTransactionCount = new Method({
 
 var sendRawTransaction = new Method({
     name: 'sendRawTransaction',
-    call: 'eth_sendRawTransaction',
+    call: 'vap_sendRawTransaction',
     params: 1,
     inputFormatter: [null]
 });
 
 var sendTransaction = new Method({
     name: 'sendTransaction',
-    call: 'eth_sendTransaction',
+    call: 'vap_sendTransaction',
     params: 1,
     inputFormatter: [formatters.inputTransactionFormatter]
 });
 
 var call = new Method({
     name: 'call',
-    call: 'eth_call',
+    call: 'vap_call',
     params: 2,
     inputFormatter: [formatters.inputTransactionFormatter, formatters.inputDefaultBlockNumberFormatter]
 });
 
 var estimateGas = new Method({
     name: 'estimateGas',
-    call: 'eth_estimateGas',
+    call: 'vap_estimateGas',
     params: 1,
     inputFormatter: [formatters.inputTransactionFormatter],
     outputFormatter: utils.toDecimal
@@ -2309,31 +2309,31 @@ var estimateGas = new Method({
 
 var compileSolidity = new Method({
     name: 'compile.solidity',
-    call: 'eth_compileSolidity',
+    call: 'vap_compileSolidity',
     params: 1
 });
 
 var compileLLL = new Method({
     name: 'compile.lll',
-    call: 'eth_compileLLL',
+    call: 'vap_compileLLL',
     params: 1
 });
 
 var compileSerpent = new Method({
     name: 'compile.serpent',
-    call: 'eth_compileSerpent',
+    call: 'vap_compileSerpent',
     params: 1
 });
 
 var submitWork = new Method({
     name: 'submitWork',
-    call: 'eth_submitWork',
+    call: 'vap_submitWork',
     params: 3
 });
 
 var getWork = new Method({
     name: 'getWork',
-    call: 'eth_getWork',
+    call: 'vap_getWork',
     params: 0
 });
 
@@ -2361,36 +2361,36 @@ var methods = [
     getWork
 ];
 
-/// @returns an array of objects describing web3.eth api properties
+/// @returns an array of objects describing web3.vap api properties
 
 
 
 var properties = [
     new Property({
         name: 'coinbase',
-        getter: 'eth_coinbase'
+        getter: 'vap_coinbase'
     }),
     new Property({
         name: 'mining',
-        getter: 'eth_mining'
+        getter: 'vap_mining'
     }),
     new Property({
         name: 'hashrate',
-        getter: 'eth_hashrate',
+        getter: 'vap_hashrate',
         outputFormatter: utils.toDecimal
     }),
     new Property({
         name: 'gasPrice',
-        getter: 'eth_gasPrice',
+        getter: 'vap_gasPrice',
         outputFormatter: formatters.outputBigNumberFormatter
     }),
     new Property({
         name: 'accounts',
-        getter: 'eth_accounts'
+        getter: 'vap_accounts'
     }),
     new Property({
         name: 'blockNumber',
-        getter: 'eth_blockNumber',
+        getter: 'vap_blockNumber',
         outputFormatter: utils.toDecimal
     })
 ];
@@ -2403,20 +2403,20 @@ module.exports = {
 
 },{"../utils/utils":7,"./formatters":18,"./method":24,"./property":27}],16:[function(require,module,exports){
 /*
-    This file is part of ethereum.js.
+    This file is part of vapory.js.
 
-    ethereum.js is free software: you can redistribute it and/or modify
+    vapory.js is free software: you can redistribute it and/or modify
     it under the terms of the GNU Lesser General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    ethereum.js is distributed in the hope that it will be useful,
+    vapory.js is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU Lesser General Public License for more details.
 
     You should have received a copy of the GNU Lesser General Public License
-    along with ethereum.js.  If not, see <http://www.gnu.org/licenses/>.
+    along with vapory.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 /** 
  * @file event.js
@@ -2492,7 +2492,7 @@ SolidityEvent.prototype.signature = function () {
  * @method encode
  * @param {Object} indexed
  * @param {Object} options
- * @return {Object} everything combined together and encoded
+ * @return {Object} everything combined togvapor and encoded
  */
 SolidityEvent.prototype.encode = function (indexed, options) {
     indexed = indexed || {};
@@ -2589,7 +2589,7 @@ SolidityEvent.prototype.execute = function (indexed, options, callback) {
     
     var o = this.encode(indexed, options);
     var formatter = this.decode.bind(this);
-    return new Filter(o, watches.eth(), formatter, callback);
+    return new Filter(o, watches.vap(), formatter, callback);
 };
 
 /**
@@ -2612,20 +2612,20 @@ module.exports = SolidityEvent;
 
 },{"../solidity/coder":1,"../utils/sha3":6,"../utils/utils":7,"./filter":17,"./formatters":18,"./watches":31}],17:[function(require,module,exports){
 /*
-    This file is part of ethereum.js.
+    This file is part of vapory.js.
 
-    ethereum.js is free software: you can redistribute it and/or modify
+    vapory.js is free software: you can redistribute it and/or modify
     it under the terms of the GNU Lesser General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    ethereum.js is distributed in the hope that it will be useful,
+    vapory.js is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU Lesser General Public License for more details.
 
     You should have received a copy of the GNU Lesser General Public License
-    along with ethereum.js.  If not, see <http://www.gnu.org/licenses/>.
+    along with vapory.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 /** @file filter.js
  * @authors:
@@ -2823,20 +2823,20 @@ module.exports = Filter;
 
 },{"../utils/utils":7,"./formatters":18,"./requestmanager":28}],18:[function(require,module,exports){
 /*
-    This file is part of ethereum.js.
+    This file is part of vapory.js.
 
-    ethereum.js is free software: you can redistribute it and/or modify
+    vapory.js is free software: you can redistribute it and/or modify
     it under the terms of the GNU Lesser General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    ethereum.js is distributed in the hope that it will be useful,
+    vapory.js is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU Lesser General Public License for more details.
 
     You should have received a copy of the GNU Lesser General Public License
-    along with ethereum.js.  If not, see <http://www.gnu.org/licenses/>.
+    along with vapory.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 /** 
  * @file formatters.js
@@ -3070,20 +3070,20 @@ module.exports = {
 
 },{"../utils/config":5,"../utils/utils":7}],19:[function(require,module,exports){
 /*
-    This file is part of ethereum.js.
+    This file is part of vapory.js.
 
-    ethereum.js is free software: you can redistribute it and/or modify
+    vapory.js is free software: you can redistribute it and/or modify
     it under the terms of the GNU Lesser General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    ethereum.js is distributed in the hope that it will be useful,
+    vapory.js is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU Lesser General Public License for more details.
 
     You should have received a copy of the GNU Lesser General Public License
-    along with ethereum.js.  If not, see <http://www.gnu.org/licenses/>.
+    along with vapory.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 /**
  * @file function.js
@@ -3180,12 +3180,12 @@ SolidityFunction.prototype.call = function () {
 
 
     if (!callback) {
-        var output = web3.eth.call(payload, defaultBlock);
+        var output = web3.vap.call(payload, defaultBlock);
         return this.unpackOutput(output);
     } 
         
     var self = this;
-    web3.eth.call(payload, defaultBlock, function (error, output) {
+    web3.vap.call(payload, defaultBlock, function (error, output) {
         callback(error, self.unpackOutput(output));
     });
 };
@@ -3202,10 +3202,10 @@ SolidityFunction.prototype.sendTransaction = function () {
     var payload = this.toPayload(args);
 
     if (!callback) {
-        return web3.eth.sendTransaction(payload);
+        return web3.vap.sendTransaction(payload);
     }
 
-    web3.eth.sendTransaction(payload, callback);
+    web3.vap.sendTransaction(payload, callback);
 };
 
 /**
@@ -3220,10 +3220,10 @@ SolidityFunction.prototype.estimateGas = function () {
     var payload = this.toPayload(args);
 
     if (!callback) {
-        return web3.eth.estimateGas(payload);
+        return web3.vap.estimateGas(payload);
     }
 
-    web3.eth.estimateGas(payload, callback);
+    web3.vap.estimateGas(payload, callback);
 };
 
 /**
@@ -3259,7 +3259,7 @@ SolidityFunction.prototype.request = function () {
     var format = this.unpackOutput.bind(this);
     
     return {
-        method: this._constant ? 'eth_call' : 'eth_sendTransaction',
+        method: this._constant ? 'vap_call' : 'vap_sendTransaction',
         callback: callback,
         params: [payload], 
         format: format
@@ -3307,20 +3307,20 @@ module.exports = SolidityFunction;
 
 },{"../solidity/coder":1,"../utils/sha3":6,"../utils/utils":7,"../web3":9,"./formatters":18}],20:[function(require,module,exports){
 /*
-    This file is part of ethereum.js.
+    This file is part of vapory.js.
 
-    ethereum.js is free software: you can redistribute it and/or modify
+    vapory.js is free software: you can redistribute it and/or modify
     it under the terms of the GNU Lesser General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    ethereum.js is distributed in the hope that it will be useful,
+    vapory.js is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU Lesser General Public License for more details.
 
     You should have received a copy of the GNU Lesser General Public License
-    along with ethereum.js.  If not, see <http://www.gnu.org/licenses/>.
+    along with vapory.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 /** @file httpprovider.js
  * @authors:
@@ -3420,20 +3420,20 @@ module.exports = HttpProvider;
 
 },{"./errors":14,"xmlhttprequest":4}],21:[function(require,module,exports){
 /*
-    This file is part of ethereum.js.
+    This file is part of vapory.js.
 
-    ethereum.js is free software: you can redistribute it and/or modify
+    vapory.js is free software: you can redistribute it and/or modify
     it under the terms of the GNU Lesser General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    ethereum.js is distributed in the hope that it will be useful,
+    vapory.js is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU Lesser General Public License for more details.
 
     You should have received a copy of the GNU Lesser General Public License
-    along with ethereum.js.  If not, see <http://www.gnu.org/licenses/>.
+    along with vapory.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 /** 
  * @file icap.js
@@ -3530,20 +3530,20 @@ module.exports = ICAP;
 
 },{"../utils/utils":7}],22:[function(require,module,exports){
 /*
-    This file is part of ethereum.js.
+    This file is part of vapory.js.
 
-    ethereum.js is free software: you can redistribute it and/or modify
+    vapory.js is free software: you can redistribute it and/or modify
     it under the terms of the GNU Lesser General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    ethereum.js is distributed in the hope that it will be useful,
+    vapory.js is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU Lesser General Public License for more details.
 
     You should have received a copy of the GNU Lesser General Public License
-    along with ethereum.js.  If not, see <http://www.gnu.org/licenses/>.
+    along with vapory.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 /** @file ipcprovider.js
  * @authors:
@@ -3743,20 +3743,20 @@ module.exports = IpcProvider;
 
 },{"../utils/utils":7,"./errors":14,"net":32}],23:[function(require,module,exports){
 /*
-    This file is part of ethereum.js.
+    This file is part of vapory.js.
 
-    ethereum.js is free software: you can redistribute it and/or modify
+    vapory.js is free software: you can redistribute it and/or modify
     it under the terms of the GNU Lesser General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    ethereum.js is distributed in the hope that it will be useful,
+    vapory.js is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU Lesser General Public License for more details.
 
     You should have received a copy of the GNU Lesser General Public License
-    along with ethereum.js.  If not, see <http://www.gnu.org/licenses/>.
+    along with vapory.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 /** @file jsonrpc.js
  * @authors:
@@ -3836,20 +3836,20 @@ module.exports = Jsonrpc;
 
 },{}],24:[function(require,module,exports){
 /*
-    This file is part of ethereum.js.
+    This file is part of vapory.js.
 
-    ethereum.js is free software: you can redistribute it and/or modify
+    vapory.js is free software: you can redistribute it and/or modify
     it under the terms of the GNU Lesser General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    ethereum.js is distributed in the hope that it will be useful,
+    vapory.js is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU Lesser General Public License for more details.
 
     You should have received a copy of the GNU Lesser General Public License
-    along with ethereum.js.  If not, see <http://www.gnu.org/licenses/>.
+    along with vapory.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 /**
  * @file method.js
@@ -4010,20 +4010,20 @@ module.exports = Method;
 
 },{"../utils/utils":7,"./errors":14,"./requestmanager":28}],25:[function(require,module,exports){
 /*
-    This file is part of ethereum.js.
+    This file is part of vapory.js.
 
-    ethereum.js is free software: you can redistribute it and/or modify
+    vapory.js is free software: you can redistribute it and/or modify
     it under the terms of the GNU Lesser General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    ethereum.js is distributed in the hope that it will be useful,
+    vapory.js is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU Lesser General Public License for more details.
 
     You should have received a copy of the GNU Lesser General Public License
-    along with ethereum.js.  If not, see <http://www.gnu.org/licenses/>.
+    along with vapory.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 /** 
  * @file namereg.js
@@ -4058,22 +4058,22 @@ module.exports = contract(abi).at(address);
 
 },{"./contract":12}],26:[function(require,module,exports){
 /*
-    This file is part of ethereum.js.
+    This file is part of vapory.js.
 
-    ethereum.js is free software: you can redistribute it and/or modify
+    vapory.js is free software: you can redistribute it and/or modify
     it under the terms of the GNU Lesser General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    ethereum.js is distributed in the hope that it will be useful,
+    vapory.js is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU Lesser General Public License for more details.
 
     You should have received a copy of the GNU Lesser General Public License
-    along with ethereum.js.  If not, see <http://www.gnu.org/licenses/>.
+    along with vapory.js.  If not, see <http://www.gnu.org/licenses/>.
 */
-/** @file eth.js
+/** @file vap.js
  * @authors:
  *   Marek Kotewicz <marek@ethdev.com>
  * @date 2015
@@ -4082,11 +4082,11 @@ module.exports = contract(abi).at(address);
 var utils = require('../utils/utils');
 var Property = require('./property');
 
-/// @returns an array of objects describing web3.eth api methods
+/// @returns an array of objects describing web3.vap api methods
 var methods = [
 ];
 
-/// @returns an array of objects describing web3.eth api properties
+/// @returns an array of objects describing web3.vap api properties
 var properties = [
     new Property({
         name: 'listening',
@@ -4108,20 +4108,20 @@ module.exports = {
 
 },{"../utils/utils":7,"./property":27}],27:[function(require,module,exports){
 /*
-    This file is part of ethereum.js.
+    This file is part of vapory.js.
 
-    ethereum.js is free software: you can redistribute it and/or modify
+    vapory.js is free software: you can redistribute it and/or modify
     it under the terms of the GNU Lesser General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    ethereum.js is distributed in the hope that it will be useful,
+    vapory.js is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU Lesser General Public License for more details.
 
     You should have received a copy of the GNU Lesser General Public License
-    along with ethereum.js.  If not, see <http://www.gnu.org/licenses/>.
+    along with vapory.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 /**
  * @file property.js
@@ -4260,20 +4260,20 @@ module.exports = Property;
 
 },{"../utils/utils":7,"./requestmanager":28}],28:[function(require,module,exports){
 /*
-    This file is part of ethereum.js.
+    This file is part of vapory.js.
 
-    ethereum.js is free software: you can redistribute it and/or modify
+    vapory.js is free software: you can redistribute it and/or modify
     it under the terms of the GNU Lesser General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    ethereum.js is distributed in the hope that it will be useful,
+    vapory.js is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU Lesser General Public License for more details.
 
     You should have received a copy of the GNU Lesser General Public License
-    along with ethereum.js.  If not, see <http://www.gnu.org/licenses/>.
+    along with vapory.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 /** 
  * @file requestmanager.js
@@ -4292,7 +4292,7 @@ var errors = require('./errors');
 
 /**
  * It's responsible for passing messages to providers
- * It's also responsible for polling the ethereum node for incoming messages
+ * It's also responsible for polling the vapory node for incoming messages
  * Default poll timeout is 1 second
  * Singleton
  */
@@ -4525,20 +4525,20 @@ module.exports = RequestManager;
 
 },{"../utils/config":5,"../utils/utils":7,"./errors":14,"./jsonrpc":23}],29:[function(require,module,exports){
 /*
-    This file is part of ethereum.js.
+    This file is part of vapory.js.
 
-    ethereum.js is free software: you can redistribute it and/or modify
+    vapory.js is free software: you can redistribute it and/or modify
     it under the terms of the GNU Lesser General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    ethereum.js is distributed in the hope that it will be useful,
+    vapory.js is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU Lesser General Public License for more details.
 
     You should have received a copy of the GNU Lesser General Public License
-    along with ethereum.js.  If not, see <http://www.gnu.org/licenses/>.
+    along with vapory.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 /** @file shh.js
  * @authors:
@@ -4595,20 +4595,20 @@ module.exports = {
 
 },{"./formatters":18,"./method":24}],30:[function(require,module,exports){
 /*
-    This file is part of ethereum.js.
+    This file is part of vapory.js.
 
-    ethereum.js is free software: you can redistribute it and/or modify
+    vapory.js is free software: you can redistribute it and/or modify
     it under the terms of the GNU Lesser General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    ethereum.js is distributed in the hope that it will be useful,
+    vapory.js is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU Lesser General Public License for more details.
 
     You should have received a copy of the GNU Lesser General Public License
-    along with ethereum.js.  If not, see <http://www.gnu.org/licenses/>.
+    along with vapory.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 /** 
  * @file transfer.js
@@ -4661,7 +4661,7 @@ var transfer = function (from, iban, value, callback) {
  * @param {Function} callback, callback
  */
 var transferToAddress = function (from, address, value, callback) {
-    return web3.eth.sendTransaction({
+    return web3.vap.sendTransaction({
         address: address,
         from: from,
         value: value
@@ -4691,20 +4691,20 @@ module.exports = transfer;
 
 },{"../web3":9,"./contract":12,"./icap":21,"./namereg":25}],31:[function(require,module,exports){
 /*
-    This file is part of ethereum.js.
+    This file is part of vapory.js.
 
-    ethereum.js is free software: you can redistribute it and/or modify
+    vapory.js is free software: you can redistribute it and/or modify
     it under the terms of the GNU Lesser General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    ethereum.js is distributed in the hope that it will be useful,
+    vapory.js is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU Lesser General Public License for more details.
 
     You should have received a copy of the GNU Lesser General Public License
-    along with ethereum.js.  If not, see <http://www.gnu.org/licenses/>.
+    along with vapory.js.  If not, see <http://www.gnu.org/licenses/>.
 */
 /** @file watches.js
  * @authors:
@@ -4714,8 +4714,8 @@ module.exports = transfer;
 
 var Method = require('./method');
 
-/// @returns an array of objects describing web3.eth.filter api methods
-var eth = function () {
+/// @returns an array of objects describing web3.vap.filter api methods
+var vap = function () {
     var newFilterCall = function (args) {
         var type = args[0];
 
@@ -4723,13 +4723,13 @@ var eth = function () {
             case 'latest':
                 args.shift();
                 this.params = 0;
-                return 'eth_newBlockFilter';
+                return 'vap_newBlockFilter';
             case 'pending':
                 args.shift();
                 this.params = 0;
-                return 'eth_newPendingTransactionFilter';
+                return 'vap_newPendingTransactionFilter';
             default:
-                return 'eth_newFilter';
+                return 'vap_newFilter';
         }
     };
 
@@ -4741,19 +4741,19 @@ var eth = function () {
 
     var uninstallFilter = new Method({
         name: 'uninstallFilter',
-        call: 'eth_uninstallFilter',
+        call: 'vap_uninstallFilter',
         params: 1
     });
 
     var getLogs = new Method({
         name: 'getLogs',
-        call: 'eth_getFilterLogs',
+        call: 'vap_getFilterLogs',
         params: 1
     });
 
     var poll = new Method({
         name: 'poll',
-        call: 'eth_getFilterChanges',
+        call: 'vap_getFilterChanges',
         params: 1
     });
 
@@ -4800,7 +4800,7 @@ var shh = function () {
 };
 
 module.exports = {
-    eth: eth,
+    vap: vap,
     shh: shh
 };
 
@@ -8870,9 +8870,9 @@ var web3 = require('./lib/web3');
 web3.providers.HttpProvider = require('./lib/web3/httpprovider');
 web3.providers.IpcProvider = require('./lib/web3/ipcprovider');
 
-web3.eth.contract = require('./lib/web3/contract');
-web3.eth.namereg = require('./lib/web3/namereg');
-web3.eth.sendIBANTransaction = require('./lib/web3/transfer');
+web3.vap.contract = require('./lib/web3/contract');
+web3.vap.namereg = require('./lib/web3/namereg');
+web3.vap.sendIBANTransaction = require('./lib/web3/transfer');
 
 // dont override global variable
 if (typeof window !== 'undefined' && typeof window.web3 === 'undefined') {

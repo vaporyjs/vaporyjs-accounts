@@ -1,10 +1,10 @@
 ## Synopsis
 
-A simple module for creating, managing and using Ethereum accounts in browser.
+A simple module for creating, managing and using Vapory accounts in browser.
 
 ## About
 
-This module allows the secure generation and management of Ethereum accounts in browser so that when browser stored accounts are being used by dApps, their outgoing transactions can be securly signed by the accounts stored in browser. All account data is stored in the browsers localStore and can be optionally encrypted with a passphrase using AES. If you're using Meteor.js, the Accounts object will be a reactive variable. 
+This module allows the secure generation and management of Vapory accounts in browser so that when browser stored accounts are being used by dApps, their outgoing transactions can be securly signed by the accounts stored in browser. All account data is stored in the browsers localStore and can be optionally encrypted with a passphrase using AES. If you're using Meteor.js, the Accounts object will be a reactive variable. 
 
 This module has been specifically designed as a transaction signer meant for use with the [HookedWeb3Provider](https://github.com/ConsenSys/hooked-web3-provider). See example below.
 
@@ -15,13 +15,13 @@ Please note that this module is still in Alpha. The security status of this modu
 ### Node.js
 
 ```
-$ npm install ethereumjs-accounts
+$ npm install vaporyjs-accounts
 ```
   
 ### Meteor.js
 
 ```
-$ meteor add silentcicero:ethereumjs-accounts
+$ meteor add silentcicero:vaporyjs-accounts
 ```
 
 ## Usage
@@ -29,7 +29,7 @@ $ meteor add silentcicero:ethereumjs-accounts
 Require the NPM module or use the standalone browserified version where the 'Accounts' object is global.
 
 ```javascript
-var Accounts = require('ethereumjs-accounts');
+var Accounts = require('vaporyjs-accounts');
 var accounts = new Accounts({minPassphraseLength: 6}); // or new Accounts(..) if using dist.
 
 // Generate a new account encrypted with a passphrase
@@ -95,17 +95,17 @@ web3.setProvider(provider);
         
 ## Browserify
 
-You may browserify ethereumjs-accounts, by installing the npm modules `npm install` and then running the browserify CMD below. Please refer to the examples to see how a standalone browserified version is setup and used.
+You may browserify vaporyjs-accounts, by installing the npm modules `npm install` and then running the browserify CMD below. Please refer to the examples to see how a standalone browserified version is setup and used.
 
 ```
-$ browserify --s Accounts index.js -o dist/ethereumjs-accounts.js
+$ browserify --s Accounts index.js -o dist/vaporyjs-accounts.js
 ```
 
 ## Components
 
 * [underscore.js](http://underscorejs.org) v1.8.3
-* [localstorejs](https://github.com/SilentCicero/LocalStore)  v0.1.9
-* [ethereumjs-tx](https://github.com/ethereum/ethereumjs-tx) v0.2.3
+* [localstorejs](https://github.com/vaporyjs/LocalStore)  v0.1.9
+* [vaporyjs-tx](https://github.com/vapory/vaporyjs-tx) v0.2.3
 * [browserify-cryptojs](https://github.com/fahad19/crypto-js/) v0.3.1
 * [bignumber.js](https://github.com/MikeMcl/bignumber.js/) ^2.0.7
 * [jszip](https://stuk.github.io/jszip/) ^2.5.0
